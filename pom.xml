@@ -22,6 +22,8 @@
 
     <spring-cloud.version>2021.0.4</spring-cloud.version>
     <spring-cloud-alibaba.version>2021.0.4.0</spring-cloud-alibaba.version>
+
+    <knife4j.version>4.0.0</knife4j.version>
   </properties>
 
   <repositories>
@@ -91,6 +93,12 @@
     <dependency>
       <groupId>com.alibaba.cloud</groupId>
       <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.xiaoymin</groupId>
+      <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
+      <version>${knife4j.version}</version>
     </dependency>
 
     <dependency>
