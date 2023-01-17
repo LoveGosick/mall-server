@@ -14,6 +14,7 @@
   <groupId>com.example</groupId>
   <artifactId>mall-server</artifactId>
   <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
   <name>mall-server</name>
   <description>Demo project for Spring Boot</description>
 
@@ -22,9 +23,17 @@
 
     <spring-cloud.version>2021.0.4</spring-cloud.version>
     <spring-cloud-alibaba.version>2021.0.4.0</spring-cloud-alibaba.version>
-
-    <knife4j.version>4.0.0</knife4j.version>
   </properties>
+
+  <modules>
+    <module>mall-server-api</module>
+    <module>mall-server-config</module>
+    <module>mall-server-core</module>
+    <module>mall-server-dao</module>
+    <module>mall-server-service</module>
+    <module>mall-server-web</module>
+    <module>start</module>
+  </modules>
 
   <repositories>
     <repository>
@@ -72,42 +81,6 @@
     </dependencies>
   </dependencyManagement>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-bootstrap</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-openfeign</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.alibaba.cloud</groupId>
-      <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.alibaba.cloud</groupId>
-      <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.github.xiaoymin</groupId>
-      <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
-      <version>${knife4j.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
   <build>
     <plugins>
       <plugin>
@@ -133,23 +106,6 @@
             <phase>compile</phase>
             <goals>
               <goal>jar-no-fork</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <configuration>
-          <mainClass>com.example.mall.Launcher</mainClass>
-          <skip>false</skip>
-        </configuration>
-        <executions>
-          <execution>
-            <id>repackage</id>
-            <goals>
-              <goal>repackage</goal>
             </goals>
           </execution>
         </executions>
