@@ -68,7 +68,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <configuration>
-          <mainClass>com.example.mall.MallServerApplication</mainClass>
+          <mainClass>com.example.mall.Launcher</mainClass>
           <skip>false</skip>
         </configuration>
         <executions>
