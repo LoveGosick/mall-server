@@ -39,7 +39,7 @@ public class ControllerExceptionAdvice {
    * @return
    */
   @ExceptionHandler(value = {Exception.class})
-  public Wrapper finalExceptionHandler(Exception e) {
+  public Wrapper exceptionHandler(Exception e) {
     // 打印日志
     printExceptionLog(e);
     // 返回响应结果
