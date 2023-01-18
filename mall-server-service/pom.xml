@@ -17,6 +17,11 @@
   <dependencies>
     <dependency>
       <groupId>com.example</groupId>
+      <artifactId>mall-server-api</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.example</groupId>
       <artifactId>mall-server-dao</artifactId>
       <version>1.0.0-SNAPSHOT</version>
     </dependency>
