@@ -1,4 +1,4 @@
-package com.example.mall.config.advice;
+package com.example.mall.config.exception;
 
 import com.example.mall.core.exception.BizException;
 import com.example.mall.core.wrapper.WrapMapper;
